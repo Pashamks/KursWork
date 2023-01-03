@@ -25,5 +25,17 @@ namespace KursWork
         {
             InitializeComponent();
         }
+
+        private void Guest_Click(object sender, RoutedEventArgs e)
+        {
+            passwordInput.Visibility = Visibility.Visible;
+            okButton.Visibility = Visibility.Visible;
+        }
+
+        private void Admin_Click(object sender, RoutedEventArgs e)
+        {
+            passwordInput.Visibility = Visibility.Visible;
+            okButton.Visibility = Visibility.Visible;
+        }
     }
 }
