@@ -47,7 +47,9 @@ namespace KursWork
                "Error", MessageBoxButton.OK);
                 return;
             }
-
+            MenuWindow mainWindow = new MenuWindow();
+            Visibility = Visibility.Hidden;
+            mainWindow.Show();
         }
     }
 }

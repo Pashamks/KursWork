@@ -26,17 +26,23 @@
 
         <TextBlock Grid.Row="1" Grid.ColumnSpan="2" Text="Інститут підвищення кваліфікації запрошує" FontSize="25" Foreground="White" HorizontalAlignment="Center"></TextBlock>
         <TextBlock Grid.Row="2" Grid.ColumnSpan="2" Text="Меню" FontSize="22" Foreground="White" HorizontalAlignment="Center"></TextBlock>
-        
-        <TextBlock Grid.Row="3" Grid.Column="0" Text="План навчання" FontSize="22" Foreground="White" HorizontalAlignment="Center"></TextBlock>
+
+        <Button Background="Transparent" Grid.Row="3" Grid.Column="0" Click="PlanButton_Click" >
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="План навчання" FontSize="22" Foreground="White" HorizontalAlignment="Center"></TextBlock>
+        </Button>
         <TextBlock Grid.Row="3" Grid.Column="1" Text="Список організацій" FontSize="22" Foreground="White" HorizontalAlignment="Center"></TextBlock>
 
-        <TextBlock Grid.Row="4" Grid.Column="0" Text="План проведення зустрічей" FontSize="22" Foreground="White" HorizontalAlignment="Center"></TextBlock>
+        <Button Background="Transparent" Grid.Row="4" Grid.Column="0">
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="План проведення зустрічей" FontSize="22" Foreground="White" HorizontalAlignment="Center"></TextBlock>
+        </Button>
         <TextBlock Grid.Row="4" Grid.Column="1" Text="Список спеціалізацій" FontSize="22" Foreground="White" HorizontalAlignment="Center"></TextBlock>
        
         <TextBlock Grid.Row="5" Grid.ColumnSpan="2" Text="Відредагувати план проведення зустрічей" FontSize="22" Foreground="Gray" HorizontalAlignment="Center"></TextBlock>
 
         <Grid Grid.Row="6" Grid.ColumnSpan="2" Width="600" Height="250" Background="AliceBlue">
-            
+            <DataGrid x:Name="grid" AutoGenerateColumns="True">
+                
+            </DataGrid>
         </Grid>
         
     </Grid>

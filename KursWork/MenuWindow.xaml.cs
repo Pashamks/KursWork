@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KursWork.DataBase;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,16 @@ namespace KursWork
     /// </summary>
     public partial class MenuWindow : Window
     {
+        DbRepository dbRepository;
         public MenuWindow()
         {
             InitializeComponent();
+            dbRepository = new DbRepository();
+        }
+
+        private void PlanButton_Click(object sender, RoutedEventArgs e)
+        {
+            grid.ItemsSource = dbRepository.GetPlanList();
         }
     }
 }
