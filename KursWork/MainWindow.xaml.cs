@@ -21,6 +21,7 @@ namespace KursWork
     /// </summary>
     public partial class MainWindow : Window
     {
+        const string password = "password";
         public MainWindow()
         {
             InitializeComponent();
@@ -36,6 +37,17 @@ namespace KursWork
         {
             passwordInput.Visibility = Visibility.Visible;
             okButton.Visibility = Visibility.Visible;
+        }
+
+        private void okButton_Click(object sender, RoutedEventArgs e)
+        {
+            if(passwordInput.Text != password)
+            {
+                MessageBox.Show("Incorect password. Try again.",
+               "Error", MessageBoxButton.OK);
+                return;
+            }
+
         }
     }
 }
