@@ -8,7 +8,21 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="back.jpg"/>
+            <ImageBrush ImageSource="background.jpg"/>
         </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition MaxHeight="100"/>
+            <RowDefinition MaxHeight="30"/>
+            <RowDefinition MaxHeight="40" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Інститут підвищення кваліфікації запрошує" FontSize="25" Foreground="White" HorizontalAlignment="Center"></TextBlock>
+        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" Text="Увійдіть в систему" FontSize="20" Foreground="White" HorizontalAlignment="Center"></TextBlock>
+        <Button Grid.Row="2" Grid.Column="0" Content="Гість" Width="90" Height="30" HorizontalAlignment="Right" Margin="0 0 20 0"></Button>
+        <Button Grid.Row="2" Grid.Column="1" Content="Адмін" Width="90" Height="30" HorizontalAlignment="Left"  Margin="20 0 0 0"></Button>
     </Grid>
 </Window>
