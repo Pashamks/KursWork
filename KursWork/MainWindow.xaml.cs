@@ -22,6 +22,7 @@ namespace KursWork
     public partial class MainWindow : Window
     {
         const string password = "password";
+        static bool isAdmin = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -37,6 +38,7 @@ namespace KursWork
         {
             passwordInput.Visibility = Visibility.Visible;
             okButton.Visibility = Visibility.Visible;
+            isAdmin = true;
         }
 
         private void okButton_Click(object sender, RoutedEventArgs e)
@@ -49,6 +51,8 @@ namespace KursWork
             }
             MenuWindow mainWindow = new MenuWindow();
             Visibility = Visibility.Hidden;
+            mainWindow.grid.CanUserAddRows = isAdmin;
+            mainWindow.grid.CanUserDeleteRows = isAdmin;
             mainWindow.Show();
         }
     }

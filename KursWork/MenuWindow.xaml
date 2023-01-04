@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KursWork"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf" 
         mc:Ignorable="d"
         Title="MenuWindow" Height="550" Width="800">
     <Grid>
@@ -15,7 +16,6 @@
             <RowDefinition MaxHeight="70"/>
             <RowDefinition MaxHeight="30"/>
             <RowDefinition MaxHeight="40" />
-            <RowDefinition MaxHeight="40"/>
             <RowDefinition MaxHeight="40"/>
             <RowDefinition />
         </Grid.RowDefinitions>
@@ -41,14 +41,10 @@
             <TextBlock Grid.Row="4" Grid.Column="1" Text="Список спеціалізацій" FontSize="22" Foreground="White" HorizontalAlignment="Center"></TextBlock>
         </Button>
 
-        <Button Background="Transparent" Grid.Row="5" Grid.ColumnSpan="2">
-            <TextBlock Grid.Row="5" Grid.ColumnSpan="2" Text="Відредагувати план проведення зустрічей" FontSize="22" Foreground="Gray" HorizontalAlignment="Center"></TextBlock>
-        </Button>
+        
+        <Grid Grid.Row="6" Grid.ColumnSpan="2"  Width="600" Height="250" Background="AliceBlue">
+            <DataGrid x:Name="grid"  CanUserDeleteRows="True" CanUserAddRows="True"  AutoGenerateColumns="True" />
 
-        <Grid Grid.Row="6" Grid.ColumnSpan="2" Width="600" Height="250" Background="AliceBlue">
-            <DataGrid x:Name="grid" AutoGenerateColumns="True">
-                
-            </DataGrid>
         </Grid>
         
     </Grid>
