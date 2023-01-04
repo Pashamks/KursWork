@@ -31,5 +31,20 @@ namespace KursWork
         {
             grid.ItemsSource = dbRepository.GetPlanList();
         }
+
+        private void MeetingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            grid.ItemsSource = dbRepository.GetApplicationsList();
+        }
+
+        private void SpecializationsButton_Click(object sender, RoutedEventArgs e)
+        {
+            grid.ItemsSource = dbRepository.GetSpecializationsList();
+        }
+
+        private void OrganizationsButton_Click(object sender, RoutedEventArgs e)
+        {
+            grid.ItemsSource = dbRepository.GetOrganizationsList();
+        }
     }
 }

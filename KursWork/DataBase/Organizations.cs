@@ -7,6 +7,6 @@ namespace KursWork.DataBase
         [Key]
         public int ID { get; set; }
         public string title { get; set; }
-        public string address { get; set; }
+        public string adress { get; set; }
     }
 }
